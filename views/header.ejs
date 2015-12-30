@@ -1,0 +1,36 @@
+<html>
+<head>
+
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+<div class="container">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">Learn About Me</a>
+<ul class="nav navbar-nav" style="font-weight: bold;font-size:15px;float: right;margin: auto auto auto 700px">
+<% if (currentUser) { %> 
+<li> 
+<a href="/edit"> 
+Hello, <%- currentUser %> 
+</a> 
+</li>
+<li><a href="/logout">Log out</a></li>
+<% } else { %>
+<li><a href="/login">Log in</a></li> 
+<li><a href="/signup">Sign up</a></li> 
+<% } %> 
+</ul>
+    </div>
+</div>
+    </div>
+    <% if(info != ""){ %>
+    <div class="container">
+    
+   <div class="alert alert-info" style="text-align: center;font-size: 20px">
+   <%= info %>
+   </div> 
+   
+    </div>
+    <% } %>

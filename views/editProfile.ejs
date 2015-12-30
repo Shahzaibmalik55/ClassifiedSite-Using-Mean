@@ -1,0 +1,15 @@
+<% include header %>
+<div style="margin: auto;text-align: center">
+<h1>Edit Your Profile</h1>
+
+<form action="/edit/<%= user.username %>" method="post" style="margin: 20px auto auto auto">
+    <input type="text" name="username" value="<%= user.username %>" style="width: 80%;margin: 10px auto auto auto;padding: 10px">
+    <br>
+    <textarea name="bio" style="width: 80%;margin: 10px auto auto auto;padding: 10px"><%= user.bio %></textarea>
+    <br>
+    <button class="btn btn-primary btn-lg" style="width: 80%;margin: 10px auto auto auto">Update Profile</button>
+
+</form>
+    <a href="/remove/<%= user._id %>" class="btn btn-danger btn-lg" style="width: 80%;margin: 10px auto auto auto">Delete Profile</a>
+
+</div>

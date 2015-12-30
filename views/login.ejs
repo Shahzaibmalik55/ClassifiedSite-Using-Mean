@@ -1,0 +1,12 @@
+<% include header %>
+<form action="/login" method="post">
+<fieldset style="width: 500px;text-align: center;margin: auto">
+    <% if(error){%>
+    <p style="color: red;font-size: 15px"><%= error %></p>
+    <% } %>
+    <legend style="font-size: 30px;color: rgba(0, 0, 255, 0.59);font-weight: bold">Log In</legend>
+    <label><input type="text" name="username" placeholder="Username" style="text-align: center;height: 40px;width: 300px;font-size: 22px;margin:10px auto auto auto;padding:10px" required="required"></label><br>
+    <label><input type="password" name="password" placeholder="Password" style="text-align: center;height: 40px;width: 300px;font-size: 22px;margin:10px auto auto auto;padding:10px" required="required"></label><br>
+    <label><button class="btn btn-success btn-lg" style="margin: 10px auto auto auto;font-size: 18px;font-weight: bold">Log in</button></label>
+</fieldset>
+</form>

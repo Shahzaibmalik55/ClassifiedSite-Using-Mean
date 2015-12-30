@@ -1,0 +1,13 @@
+<% include header %>
+<div style="text-align:center;background-color:rgba(192, 192, 192, 0.49);padding:15px;width:80%;margin:auto;border-radius:10px">
+<% if (currentUser == user.username) { %>
+<a href="/edit" class="btn btn-warning" style="font-size:15px;font-wieght:bold;">Edit your profile</a>
+<% } %>
+<h1 style="color:blue"><%= user.username %></h1>
+<h2>Joined on <%= user.createdAt %></h2>
+<% if (user.bio) { %>
+<h3 style="color:white;font-weight: bold;font-size: 28px">Person's Bio</h3>
+<p style="font-size:17px"><%= user.bio %></p>
+<% } %>
+
+</div>

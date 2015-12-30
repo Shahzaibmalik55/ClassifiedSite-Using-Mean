@@ -1,0 +1,24 @@
+<% include header %>
+
+<h1 style="text-align:center">Welcome to learn about Me !</h1>
+
+<% for(var i = 0; i < users.length; i++) { %>
+<div class="panel panel-default" style="width:80%;margin:15px auto auto auto;border-radius:10px">
+<div class="panel-heading" style="">
+<a href="/users/<%= users[i].username %>" style="color:blue;font-weight:bold;font-size:20px;text-decoration:none;padding:10px;">
+<%= users[i].username %>
+</a>
+<% if(users[i].bio){ %>
+<div class="panel-body" style="background-color:white;border-radius:5px;width:100%">
+<%= users[i].bio %>
+</div>
+<% } %>
+</div>
+</div>
+<% } %>
+</body>
+<script>
+
+var users = <%- users %>
+</script>
+</html>
