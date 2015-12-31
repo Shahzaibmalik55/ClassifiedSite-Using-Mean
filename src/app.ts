@@ -27,8 +27,6 @@ app.use(bodyParser.json())
 
 
 //interface sessionObject extends Session
-
-
 app.use(session({
   genid: function(req) {
     return (Date.now()).toString()// use UUIDs for session IDs 

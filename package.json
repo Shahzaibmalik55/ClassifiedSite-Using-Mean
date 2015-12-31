@@ -2,7 +2,7 @@
   "name": "login",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "app.js",
   "scripts":{
     "start": "node built/app.js"
     },
