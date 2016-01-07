@@ -10,7 +10,7 @@ import flash = require('connect-flash');
 var app : express.Express = express();
 
 //Conecting database
-//mongoose.connect('mongodb://localhost/logins');
+// mongoose.connect('mongodb://localhost/logins');
 mongoose.connect('mongodb://logins:shahzu123@ds037215.mongolab.com:37215/loginusers');
 
 // view engine setup
@@ -39,7 +39,7 @@ app.use(flash());
 
 app.use(function(req,res,next){
   res.locals.currentUser = req.session['username'];
-  res.locals.info = req.flash('info');
+ res.locals.info = req.flash('info');
   next();
 })
 
@@ -107,7 +107,7 @@ app.post('/signup',function(req,res,next){
   res.locals.currentUser = req.session['username'];
   
     newUser.save(function(){
-      req.flash('info','Welcome' + " " + req.session['username'])
+     req.flash('info','Welcome' + " " + req.session['username'])
       res.redirect  ('/');
     });
     
@@ -161,7 +161,7 @@ app.get('/logout',function(req,res,next){
 })
 
 
-var port = 4000;
+var port = process.env.PORT || 4000;
 app.listen(port,function(){
 	console.log('Server Listning on ' + port)
 })

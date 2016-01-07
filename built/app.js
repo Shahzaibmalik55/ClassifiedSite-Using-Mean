@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var flash = require('connect-flash');
 var app = express();
 //Conecting database
-//mongoose.connect('mongodb://localhost/logins');
+// mongoose.connect('mongodb://localhost/logins');
 mongoose.connect('mongodb://logins:shahzu123@ds037215.mongolab.com:37215/loginusers');
 // view engine setup
 app.set('views', path.join(__dirname, '/../views'));
@@ -129,7 +129,7 @@ app.get('/logout', function (req, res, next) {
     delete req.session['username'];
     res.redirect('/login');
 });
-var port = 4000;
+var port = process.env.PORT || 4000;
 app.listen(port, function () {
     console.log('Server Listning on ' + port);
 });
