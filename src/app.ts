@@ -10,8 +10,8 @@ import flash = require('connect-flash');
 var app : express.Express = express();
 
 //Conecting database
-// mongoose.connect('mongodb://localhost/logins');
-mongoose.connect('mongodb://logins:shahzu123@ds037215.mongolab.com:37215/loginusers');
+mongoose.connect('mongodb://127.0.01/logins');
+// mongoose.connect('mongodb://logins:shahzu123@ds037215.mongolab.com:37215/loginusers');
 
 // view engine setup
 app.set('views', path.join(__dirname, '/../views'));
